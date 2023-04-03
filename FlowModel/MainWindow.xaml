@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox Name="Width" Width="200" Height="50" Margin="98,134,502,250" Text="0,14" FontFamily="Cascadia Code" FontSize="20"></TextBox>
+        <TextBox Name="Height" Width="200" Height="50" Margin="98,189,502,195" Text="0,008" FontFamily="Cascadia Code" FontSize="20"></TextBox>
+        <TextBox Name="Length" Width="200" Height="50" Margin="98,244,502,140" Text="4,5" FontFamily="Cascadia Code" FontSize="20"></TextBox>
+        <TextBox Name="Temperature" Width="200" Height="50" Margin="98,57,502,327" Text="50" FontFamily="Cascadia Code" FontSize="20"></TextBox>
+        <Label Content="Answer:" HorizontalAlignment="Left" Margin="460,195,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Cascadia Code"/>
+        <Label Name="Answer" Content="" HorizontalAlignment="Left" Margin="560,195,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontFamily="Cascadia Code"/>
+        <Button Content="Calculate" HorizontalAlignment="Left" Margin="98,328,0,0" Height="50" Width="200" VerticalAlignment="Top" Click="Button_Click" FontFamily="Cascadia Code" FontSize="20"/>
 
     </Grid>
 </Window>

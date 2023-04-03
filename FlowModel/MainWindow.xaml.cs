@@ -20,9 +20,34 @@ namespace FlowModel
     /// </summary>
     public partial class MainWindow : Window
     {
+        Calculations calculations;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Answer.Content = "";
+
+            if (Temperature == null) return;
+
+            if(Width.Text == "" || Height.Text == "" || Length.Text == "")
+            {
+                double temperature = Convert.ToDouble(Temperature.Text.ToString());
+                calculations = new Calculations(temperature);
+            }
+            else
+            {
+                double temperature = Convert.ToDouble(Temperature.Text.ToString());
+                double width = Convert.ToDouble(Width.Text.ToString());
+                double height = Convert.ToDouble(Height.Text.ToString());
+                double length = Convert.ToDouble(Length.Text.ToString());
+                calculations = new Calculations(temperature, width, height, length);
+            }
+
+            Answer.Content = Math.Round(calculations.CoefficientOfConsistensy(), 5).ToString();
+            
         }
     }
 }
